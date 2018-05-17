@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "yanyanghong",
+        "age": 24,
+        "sex": "男",
+        "area": "南充"
+    },
+    {
+        "id": 2,
+        "name": "ZouLei",
+        "age": 25,
+        "sex": "女",
+        "area": "乐山"
+    },
+    {
+        "id": 3,
+        "name": "Shuiqian",
+        "age": 24,
+        "sex": "女",
+        "area": "遂宁"
+    },
+    {
+        "id": 4,
+        "name": "ZhaoFang",
+        "age": 25,
+        "sex": "女",
+        "area": "广元"
+    },
+    {
+        "id": 5,
+        "name": "MiaoLin",
+        "age": 25,
+        "sex": "男",
+        "area": "宜宾"
+    },
+    {
+        "id": 6,
+        "name": "GaoShan",
+        "age": 28,
+        "sex": "男",
+        "area": "成都"
+    }
+]
