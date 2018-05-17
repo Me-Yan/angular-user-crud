@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../service/user.service';
 import { UserModel } from '../model/user.model';
+import { MatTableModule } from '@angular/material/table';
 
 @Component({
     selector: 'app-user-list',

@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './service/user.service';
 import { UserListComponent } from './user-list/user-list.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    NoopAnimationsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
