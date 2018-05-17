@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../service/user.service';
 import { UserModel } from '../model/user.model';
-import { MatTableModule } from '@angular/material/table';
 
 @Component({
     selector: 'app-user-list',
@@ -10,7 +9,7 @@ import { MatTableModule } from '@angular/material/table';
 })
 export class UserListComponent implements OnInit {
 
-    constructor(private userService: UserService) {}
+    constructor(private userService: UserService) { }
 
     userList: UserModel[];
 

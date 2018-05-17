@@ -1,0 +1,13 @@
+.table {
+    margin: 50px 0;
+    width: 100%;
+    text-align: center;
+    border-collapse:collapse;
+}
+.table thead tr th {
+    padding: 10px 0;
+}
+.table tbody tr td {
+    border-bottom: 1px dashed #ccc;
+    padding: 10px 0;
+}

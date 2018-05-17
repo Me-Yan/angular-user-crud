@@ -5,9 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './service/user.service';
 import { UserListComponent } from './user-list/user-list.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,8 +16,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule.forRoot(),
-    NoopAnimationsModule
+    NgbModule.forRoot()
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
