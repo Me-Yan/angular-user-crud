@@ -1,1 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
+/* table */
+.table {
+    width: 100%;
+    text-align: center;
+    border-collapse:collapse;
+}
+.table thead tr th {
+    padding: 10px 0;
+}
+.table tbody tr td {
+    border-bottom: 1px dashed #ccc;
+    padding: 10px 0;
+}
+
+/* button */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-blue {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn-blue:hover {
+    background-color: #105694;
+    border-color: #105694;
+}
+.btn-gray {
+    background-color: #ccc;
+    color: #000000;
+    border-color: #ccc;
+}
+.btn-gray:hover {
+    background-color: #a8a1a1;
+    border-color: #a8a1a1;
+}
+
+form {
+    width: 100%;
+}
+fieldset {
+    border: 1px dashed #333;
+}
+.form-group {
+    width: 100%;
+    padding-bottom: 15px;
+}
+.control-label {
+    display: inline-block;
+    width: 35%;
+    text-align: right;
+}
+.form-control {
+    display: inline-block;
+    width: 30%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+input[type='text']:focus {
+    padding: 8px;
+    border-color: green;
+    box-shadow: 0px 0px 1px 0px green inset;
+}
+.text-center {
+    text-align: center;
+}
+
+/* error message */
+.error-message {
+    font-size: 10px;
+    color: red;
+    margin-left: 35%;
+    width: 50%;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+select.form-control {
+    width: 31.5%;
+}
+
+/* modal */
+.modal-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5000;
+    opacity: 0.5;
+    background-color: #333333;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    opacity: 1;    
+}
+.modal-dialog {
+    background-color: #fff;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 6%;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    border-radius: 6px;
+}
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+}
+.modal-body, .modal-footer {
+    min-height: 90px;
+}
