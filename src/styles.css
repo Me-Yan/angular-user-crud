@@ -124,13 +124,15 @@ select.form-control {
     margin-top: 6%;
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
     border-radius: 6px;
+    position: relative;
+}
+.modal-header {
+    padding: 20px;
 }
 .modal-close {
     position: absolute;
     top: 0;
-    right: 5px;
+    right: 15px;
     cursor: pointer;
-}
-.modal-body, .modal-footer {
-    min-height: 90px;
+    color: #000000;
 }
