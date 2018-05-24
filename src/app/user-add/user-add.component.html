@@ -1,47 +1,62 @@
-<form action="" novalidate>
+<form [formGroup]="userForm" novalidate (ngSubmit)="submitForm()">
   <fieldset>
     <legend>New User</legend>
     <div class="form-group">
       <label for="name" class="control-label">Name:</label>
-      <input type="text" name="name" class="form-control" />
-      <div class="error-message">该用户已存在。</div>
+      <input type="text" name="name" class="form-control" formControlName="name" />
+      <div class="error-message" [hidden]="userForm.controls.name.valid||userForm.controls.name.untouched||userForm.controls.name.premise">
+          <div *ngIf="userForm.controls.name.errors?.required">the field is required.</div>
+          <div *ngIf="!userForm.controls.name.errors?.minLength">the field cannot be less than 2 characters.</div>
+          <span *ngIf="userForm.controls.name.errors?.maxLength">the field cannot be more than 16 characters.</span>
+      </div>
     </div>
     <div class="form-group">
-      <label for="name" class="control-label">Age:</label>
-      <input type="text" name="name" class="form-control" />
-      <div class="error-message">请输入有效的数字。</div>
+      <label for="age" class="control-label">Age:</label>
+      <input type="text" name="age" class="form-control" formControlName="age" />
+      <div class="error-message" [hidden]="userForm.controls.age.valid||userForm.controls.age.untouched||userForm.controls.age.premise">
+        <span *ngIf="userForm.controls.age.errors?.required">the field is required.</span>
+        <span *ngIf="userForm.controls.age.errors?.pattern">the value is invalid.</span>
+      </div>
     </div>
     <div class="form-group">
-      <label for="name" class="control-label">Sex:</label>
-      <select name="name" class="form-control">
-        <option value="男">男</option>
+      <label for="sex" class="control-label">Sex:</label>
+      <select name="sex" class="form-control" formControlName="sex">
+        <option value="男" selected>男</option>
         <option value="女">女</option>
       </select>
-      <div class="error-message">不能为空。</div>
+      <div class="error-message" [hidden]="userForm.controls.sex.valid||userForm.controls.sex.untouched||userForm.controls.sex.premise">
+          <span *ngIf="userForm.controls.sex.errors?.required">the field is required.</span>
+      </div>
     </div>
     <div class="form-group">
-      <label for="name" class="control-label">Area:</label>
-      <input type="text" name="name" class="form-control" />
-      <div class="error-message">该项为必填项。</div>
+      <label for="area" class="control-label">Area:</label>
+      <input type="text" name="area" class="form-control" formControlName="area" />
+      <div class="error-message" [hidden]="userForm.controls.area.valid||userForm.controls.area.untouched||userForm.controls.area.premise">
+          <span *ngIf="userForm.controls.area.errors?.required">the field is required.</span>
+          <span *ngIf="userForm.controls.area.errors?.minLength">the field cannot be less than 2 characters.</span>
+          <span *ngIf="userForm.controls.area.errors?.maxLength">the field cannot be more than 20 characters.</span>
+      </div>
     </div>
   </fieldset>
   <div class="text-center" style="padding: 20px 0;">
-    <button type="button" class="btn btn-blue">Submit</button>
+    <button type="button" class="btn btn-blue" (click)="onConfirmModal(true)">Submit</button>
     <button type="button" class="btn btn-gray">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
   </div>
 </form>
 
-<div class="modal">    
+<div class="modal fade in" *ngIf="display">    
   <div class="modal-dialog">
       <div class="modal-header">
-        <h5>Tips</h5>
+        <span>Tips</span>
         <a class="modal-close">x</a>
       </div>
-      <div class="modal-body"></div>
+      <div class="modal-body text-center">
+        <p>Confirm your submission ?</p>
+      </div>
       <div class="modal-footer text-center">
           <button type="button" class="btn btn-blue">Confirm</button>
-          <button type="button" class="btn btn-gray">Cancel</button>
+          <button type="button" class="btn btn-gray" (click)="onConfirmModal(false)">Cancel</button>
       </div>
   </div>
 </div>
-<div class="modal-mask"></div>
+<div class="modal-mask mask-fade mask-in" *ngIf="display"></div>

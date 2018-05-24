@@ -105,8 +105,16 @@ select.form-control {
     bottom: 0;
     left: 0;
     z-index: 5000;
-    opacity: 0.5;
     background-color: #333333;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+.mask-fade {
+    opacity: 0;
+}
+.mask-fade.mask-in {
+    opacity: 0.5;
 }
 .modal {
     position: fixed;
@@ -115,7 +123,9 @@ select.form-control {
     bottom: 0;
     left: 0;
     z-index: 10000;
-    opacity: 1;    
+    -webkit-transition: opacity 2s linear;
+    -o-transition: opacity 2s linear;
+    transition: opacity 2s linear;
 }
 .modal-dialog {
     background-color: #fff;
@@ -126,13 +136,35 @@ select.form-control {
     border-radius: 6px;
     position: relative;
 }
-.modal-header {
-    padding: 20px;
-}
 .modal-close {
     position: absolute;
-    top: 0;
+    top: 4px;
     right: 15px;
     cursor: pointer;
     color: #000000;
+}
+.modal-header {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.modal-body {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.modal-footer {
+    padding: 10px 0;
+}
+.fade {
+    opacity: 0;
+}
+.fade.in {
+    opacity: 1;
+}
+
+.ng-touched:not(form),.ng-invalid:not(form) {
+    border: 1px solid #f00;
+}
+
+.ng-valid:not(form),.ng-untouched:not(form) {
+    border: 1px solid #ddd;
 }
