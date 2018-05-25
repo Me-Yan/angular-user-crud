@@ -39,8 +39,8 @@
     </div>
   </fieldset>
   <div class="text-center" style="padding: 20px 0;">
-    <button type="button" class="btn btn-blue" (click)="onConfirmModal(true)">Submit</button>
-    <button type="button" class="btn btn-gray">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+    <button type="button" class="btn btn-blue" (click)="onConfirmModal(true)" [disabled]="!userForm.valid">Submit</button>
+    <button type="button" class="btn btn-gray" [routerLink]="['']">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
   </div>
 </form>
 
